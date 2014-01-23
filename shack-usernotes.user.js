@@ -38,6 +38,21 @@
 		return null;
 	}
 
+	function moveCaretToEnd(el)
+	{
+	    if (typeof el.selectionStart == "number")
+	    {
+	        el.selectionStart = el.selectionEnd = el.value.length;
+	    }
+	    else if (typeof el.createTextRange != "undefined")
+	    {
+	        el.focus();
+	        var range = el.createTextRange();
+	        range.collapse(false);
+	        range.select();
+	    }
+	}
+
 	function showUserNotesBox(evt)
 	{
 		var usernotesboxform = document.getElementById("usernotesboxform_" + evt.target.postid);
@@ -187,6 +202,7 @@
 
 		var textarea = document.createElement("textarea");
 		textarea.id = "frm_body_" + postid;
+		textarea.autofocus = true;
 		textarea.onkeydown = "";
 		textarea.name = "body";
 		textarea.onblur = "typing=false";
@@ -211,6 +227,7 @@
 		notes_button.appendChild(notebox_div);
 
 		textarea.focus();
+		moveCaretToEnd(textarea);
 	}
 
 	function installNotesButtons()

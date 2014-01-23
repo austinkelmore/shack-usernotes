@@ -8,7 +8,7 @@
 // @exclude http://bananas.shacknews.com/*
 // @exclude http://*.gmodules.com/*
 // @exclude http://*.facebook.com/*
-// @version     1.0
+// @version     1.0.1
 // @grant GM_addStyle
 // @grant GM_getValue
 // @grant GM_setValue

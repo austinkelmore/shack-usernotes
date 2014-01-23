@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        shack-usernotes
-// @namespace   https://github.com/gimpyprophet/shack-usernotes
+// @namespace   https://github.com/gimpyprophet/shack-usernotes/raw/master/shack-usernotes.user.js
 // @description Adds a notes box that saves notes per user
 // @include http://shacknews.com/*
 // @include http://www.shacknews.com/*
@@ -8,7 +8,7 @@
 // @exclude http://bananas.shacknews.com/*
 // @exclude http://*.gmodules.com/*
 // @exclude http://*.facebook.com/*
-// @version     0.1
+// @version     1.0
 // @grant GM_addStyle
 // @grant GM_getValue
 // @grant GM_setValue
